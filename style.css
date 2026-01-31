@@ -24,7 +24,7 @@ body {
     position: relative;
 }
 
-/* Left line */
+
 .title::before,
 .title::after {
     content: "";
@@ -44,7 +44,7 @@ body {
 }
 
 
-/* Base card */
+
 .option {
     border: 2px solid #eee;
     padding: 15px;
@@ -56,26 +56,26 @@ body {
 }
 
 
-/* HOVER ZOOM ONLY */
+
 .option:hover {
     transform: scale(1.03);
     border-color: #ff6b81;
 }
 
-/* SELECTED = EXPANDED */
+
 .option.selected {
     border-color: #ff6b81;
     background: #fff6f8;
 }
 
-/* Hide extra content normally */
+
 .selectors {
     max-height: 0;
     opacity: 0;
     transition: all 0.4s ease;
 }
 
-/* Show when selected */
+
 .option.selected .selectors {
     max-height: 500px;
     opacity: 1;
@@ -151,7 +151,7 @@ body {
 .selectors {
     max-height: 0;
     opacity: 0;
-    overflow: hidden;   /* ✅ ADD THIS LINE */
+    overflow: hidden;   
     transition: all 0.4s ease;
 }
 
@@ -194,7 +194,7 @@ select {
     color: #999;
     margin-top: 10px;
     text-align: right;
-    font-style: italic;   /* ✅ makes it italic */
+    font-style: italic;   
 }
 
 
