@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px;
+}
+
+.bundle-card {
+    width: 420px;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.title {
+    text-align: center;
+    color: #ff6b81;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Left line */
+.title::before,
+.title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 2px;
+    background: #ddd;
+}
+
+.title::before {
+    left: 0;
+}
+
+.title::after {
+    right: 0;
+}
+
+
+/* Base card */
+.option {
+    border: 2px solid #eee;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+    background: white;
+}
+
+
+/* HOVER ZOOM ONLY */
+.option:hover {
+    transform: scale(1.03);
+    border-color: #ff6b81;
+}
+
+/* SELECTED = EXPANDED */
+.option.selected {
+    border-color: #ff6b81;
+    background: #fff6f8;
+}
+
+/* Hide extra content normally */
+.selectors {
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+/* Show when selected */
+.option.selected .selectors {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 12px;
+}
+
+.option label {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.option-text strong {
+    font-size: 16px;
+}
+
+.sub {
+    font-size: 12px;
+    color: #666;
+}
+
+.badge {
+    background: #ff6b81;
+    color: white;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.badge.small {
+    font-size: 11px;
+}
+
+.price {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.price strong {
+    font-size: 18px;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.popular-tag {
+    position: absolute;
+    top: -14px;
+    right: -2px;
+    background: #ff6b81;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 6px 6px 0 0;
+    letter-spacing: 0.5px;
+}
+.popular-tag::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    border-left: 6px solid transparent;
+    border-top: 6px solid #d94f65;
+}
+
+
+.selectors {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;   /* ✅ ADD THIS LINE */
+    transition: all 0.4s ease;
+}
+
+
+select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.shipping {
+    color: #ff6b81;
+    font-weight: bold;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.btn {
+    width: 100%;
+    background: #ff6b81;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.powered {
+    font-size: 12px;
+    color: #999;
+    margin-top: 10px;
+    text-align: right;
+    font-style: italic;   /* ✅ makes it italic */
+}
+
+
